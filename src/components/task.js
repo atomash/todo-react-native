@@ -3,7 +3,7 @@ import {Text, View, Button, StyleSheet} from 'react-native'
 
 const TaskList = ({task, removeTask}) => {
     return (
-        <View >
+        <View style={{borderWidth: 0.5, margin: 15}} >
             <Text 
                 style={styles.task} 
                 >Title: { task.title },
@@ -27,7 +27,6 @@ const TaskList = ({task, removeTask}) => {
 
 const styles = StyleSheet.create({
     task: {
-        borderWidth: 0.5,
         fontSize: 30,
         padding: 10,
         textAlign: 'center', 
