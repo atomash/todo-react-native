@@ -28,7 +28,7 @@ class HomePage extends Component {
         },
         body: JSON.stringify({
             title: this.state.title,
-            priority: Number(this.state.priority),
+            priority: this.state.priority,
         }),
         })
     }
