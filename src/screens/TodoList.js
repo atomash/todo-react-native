@@ -21,17 +21,17 @@ class TodoListPage extends Component {
             fetch(`${host}/api/todo/${id}`, {
                 method: 'DELETE'
                 }).then((res) => {
-                    // if(res.status === 200) {
-                    //     this.setState({
-                    //         tasks: this.state.tasks.filter(task => task._id !== id)
-                    //       });
-                    // }
+                    if(res.status === 200) {
+                        this.setState({
+                            tasks: this.state.tasks.filter(task => task._id !== id)
+                          });
+                    }
                 }).catch((error) => {
                     console.error(error);
             });
-            this.setState({
-                tasks: this.state.tasks.filter(task => task._id !== id)
-              });
+            // this.setState({
+            //     tasks: this.state.tasks.filter(task => task._id !== id)
+            //   });
         }
     }
     componentDidMount(){
