@@ -52,7 +52,7 @@ class TodoListPage extends Component {
         return (
             <View style={styles.container}>
             {this.state.loading
-                    ? <ActivityIndicator size="large" />
+                    ? <ActivityIndicator style={{flex: 1,justifyContent: 'center'}} size="large" />
                     :  (this.state.tasks.length === 0)
                     ? <Text style={{
                         fontSize: 30,
